@@ -1,0 +1,42 @@
+# Doxyfile configuration for generating Doxygen documentation
+
+# The directory that contains the project files (set to '.' for the current directory)
+INPUT = . #specify input directories like inclue, src, or test etc what you wnat to include in docs
+
+# Set the output directory for the generated documentation (HTML format in this case)
+OUTPUT_DIRECTORY = docs 
+
+# Project information
+PROJECT_NAME = "reversingLinkedlist"
+PROJECT_NUMBER = "1.0"
+PROJECT_BRIEF = "Efficient implementation of reversing singly linkedlist."
+
+# Enable the generation of HTML output
+GENERATE_HTML = YES
+GENERATE_LATEX = NO #disable the generation of latex
+GENERATE_PDF = NO   #disable the generation of pdf
+
+HTML_OUTPUT = html
+
+# Enable comments to be parsed by Doxygen
+EXTRACT_ALL = YES  #extract all the comments
+
+# Use the 'PRIVATE' and 'PROTECTED' access specifiers in documentation
+#EXTRACT_PRIVATE = YES       #it means the private variables or methods in case of C++ be documented as well
+#EXTRACT_PROTECTED = YES     # same as above; if these are no then only public memebers are included to docs
+
+# Include function parameters in the output
+INCLUDE_PARAM_NAMES = YES
+
+# Optimize output for large projects
+OPTIMIZE_OUTPUT_FOR_C = YES
+
+# Specify file formats to parse (like .cpp and .hpp)
+FILE_PATTERNS = *.c *.h
+
+# Exclude directories (optional), any directory can be excluded dependant on the choice
+# EXCLUDE = test/
+
+# Enabling warnings for missing documentation
+WARN_IF_UNDOCUMENTED = YES
+
