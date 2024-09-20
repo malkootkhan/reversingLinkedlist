@@ -38,7 +38,23 @@ void display(struct Node* head)
     }
     printf("\n");
 }
+void reverse(struct Node** head)
+{
 
+    struct Node *curr = (*head);
+    struct Node *prev = NULL;
+    struct Node *next = NULL;
+    while(curr)
+    {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    (*head) = prev;
+
+
+}
 
 
 int main()
@@ -50,8 +66,9 @@ int main()
     insert(&head, 30);
     insert(&head, 40);
 
-    if(!head)
-        printf("Head is still null\n");
+    display(head);
+
+    reverse(&head);
 
     display(head);
     
