@@ -22,7 +22,7 @@ jobs:
 
       # Run Cppcheck analysis
       - name: Run Cppcheck
-        run: cppcheck --enable=all --std=c99 --library=posix ../../reversingLinkedlist.c > cppcheck_report.txt || true
+        run: cppcheck --enable=all --std=c99 --library=posix reversingLinkedlist.c > cppcheck_report.txt || true
 
       # Upload the Cppcheck report as an artifact
       - name: Upload Cppcheck Report
