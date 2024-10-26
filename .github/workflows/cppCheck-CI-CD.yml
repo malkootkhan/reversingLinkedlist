@@ -26,7 +26,7 @@ jobs:
 
       # Upload the Cppcheck report as an artifact
       - name: Upload Cppcheck Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: cppcheck_report
           path: cppcheck_report.txt
